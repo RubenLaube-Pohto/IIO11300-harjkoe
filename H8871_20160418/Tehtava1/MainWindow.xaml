@@ -1,0 +1,23 @@
+﻿<Window x:Class="Tehtava1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tehtava1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <DockPanel>
+            <StackPanel DockPanel.Dock="Left">
+                <Calendar x:Name="cdrCalendar" SelectedDatesChanged="cdrCalendar_Date_Changed"/>
+                <TextBlock x:Name="tbName"/>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Right">
+                <TextBlock Text="Anna haettava nimi"/>
+                <TextBox x:Name="txtName"/>
+                <Button x:Name="btnGet_date" Content="Hae päivä" Click="btnGet_date_Click"/>
+                <TextBlock x:Name="tbDate"/>
+            </StackPanel>
+        </DockPanel>
+    </Grid>
+</Window>

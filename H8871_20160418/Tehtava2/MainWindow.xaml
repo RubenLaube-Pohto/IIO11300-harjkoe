@@ -1,0 +1,25 @@
+﻿<Window x:Class="Tehtava2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tehtava2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <DockPanel Margin="10">
+            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+                <TextBlock>CSV-tiedosto</TextBlock>
+                <TextBox x:Name="txtCSV_file" Width="200">asiakkaat.csv</TextBox>
+                <Button x:Name="btnGet_CSV" Click="btnGet_CSV_Click">Hae</Button>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                <TextBlock>XML-tiedosto</TextBlock>
+                <TextBox x:Name="txtXML_file" Width="200">asiakkaat.xml</TextBox>
+                <Button x:Name="btnSave_XML" Click="btnSave_XML_Click">Vie</Button>
+                <Button x:Name="btnClose" Click="btnClose_Click" Margin="50,0,0,0">Sulje</Button>
+            </StackPanel>
+            <DataGrid x:Name="dgData" ItemsSource="{Binding}" AutoGenerateColumns="True" Margin="0,10"/>
+        </DockPanel>
+    </Grid>
+</Window>
